@@ -1,3 +1,4 @@
 *.webm
 *db.sqlite3
 *awsPass.txt
+*.pem
