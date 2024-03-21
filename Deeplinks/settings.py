@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "corsheaders",
     "rest_framework",
     "Users",
-    "corsheaders",
 
 ]
 
@@ -58,7 +58,19 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-CORS_ALLOW_ALL_ORIGINS: True
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    '13.48.131.120',
+    # ...
+]
+
+
+CORS_ALLOWED_ORIGINS =  [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://13.48.131.120:8001",
+]
 
 ROOT_URLCONF = "Deeplinks.urls"
 
